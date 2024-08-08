@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AirDefense.Models
 {
-    public class Threats
+    public class Threat
     {
         [Key]
         public int Id { get; set; }
@@ -15,14 +15,14 @@ namespace AirDefense.Models
 
         public int ResponseTime { get; set; }
 
-        public string statos { get; set; }
+        public string status { get; set; }
 
-        public Threats(Country country, Weapon weapon)
+        public Threat(Country country, Weapon weapon)
         {
             this.country = country;
             this.weapon = weapon;
             this.ResponseTime = (country.Distance / weapon.Speed) * 60;
-            this.statos = "action";
+            this.status = "action";
         }
     }
 }

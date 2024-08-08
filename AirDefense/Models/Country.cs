@@ -14,9 +14,7 @@ namespace AirDefense.Models
 
         [Display(Name = "Country distance")]
         public int Distance {  get; set; }
-        public Country()
-        {
-        }
+
     }
 
 }
